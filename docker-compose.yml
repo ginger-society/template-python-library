@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+    lib:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+
+        command: /bin/sh -c "while sleep 1000; do :; done"
+        volumes:
+            - ./:/workspace/
+            - ~/.gitconfig:/etc/gitconfig
+            - ~/.ssh:/root/.ssh
+
+    pypiserver:
+        # platform: linux/x86_64
+        container_name: pypi
+        platform: linux/x86_64
+        image: pypiserver/pypiserver:latest
+        command: run
+        ports:
+            - 8082:8080
+        volumes:
+            - ./dist:/data/packages

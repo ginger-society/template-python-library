@@ -1,0 +1,15 @@
+{
+	"name": "pylib",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "lib",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ritwickdey.LiveServer",
+				"ms-python.autopep8",
+				"ms-python.black-formatter"
+			]
+		}
+	}
+}

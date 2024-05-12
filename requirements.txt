@@ -1,0 +1,7 @@
+commitizen==2.42.1
+coverage==7.2.1
+pre-commit==3.0.1
+sphinx==7.0.1
+furo==2023.5.20
+pytest==7.4.3
+coverage-threshold==0.4.4
